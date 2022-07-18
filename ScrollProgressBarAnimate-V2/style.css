@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1.2px;
+    line-height: 1.3;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: cornsilk;
+    text-align: center;
+    margin: 2rem auto;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 3rem auto;
+}
+section {
+    max-height: content;
+    border: 3px solid ;
+    border-color: linear-gradient(to top, lime, pink, violet, blue);
+    height: min-content;
+    text-align: center;
+    margin: 0 2rem;
+    
+}
+.borderLinearGradient {
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-clip: padding-box;
+    border: solid 5px transparent;
+    height: min-content;
+}
+.borderLinearGradientTwo {
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-clip: padding-box;
+    border: solid 5px transparent;
+    border-radius: 1em;
+    height: min-content;
+}
+.borderLinearGradient:before, .borderLinearGradientTwo:before  {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px;
+    /* !importanté */
+    border-radius: inherit;
+    /* !importanté */
+    background: linear-gradient(lime, pink, violet, blue);
+    animation: animate 6s linear infinite;
+    filter: blur(10px);
+}
+.borderLinearGradient:after, .borderLinearGradientTwo:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px;
+    /* !importanté */
+    border-radius: inherit;
+    /* !importanté */
+    background: linear-gradient(lime, pink, violet, blue);
+    animation: animate 6s linear infinite;
+    filter: blur(40px);
+}
+.borderLinearGradientThree {
+    width: 100%;
+    max-width: 450px;
+    height: min-content;
+    padding: 1rem;
+    color: white;
+    border-width: 5px;
+    border-style: solid;
+    border-image: 
+      linear-gradient(
+        to bottom, 
+        lime, 
+        rgba(0, 0, 0, 0)
+      ) 1 100%;  
+    position: relative;
+    box-sizing: border-box;
+    animation: animate 6s linear infinite;
+}
+.borderLinearGradientThree::before {
+    width: 100%;
+    max-width: 450px;
+    height: min-content;
+    padding: 1rem;
+    color: white;
+    border-width: 5px;
+    border-style: solid;
+    border-image: 
+      linear-gradient(
+        to bottom, 
+        lime, 
+        rgba(0, 0, 0, 0)
+      ) 1 100%;  
+    position: relative;
+    box-sizing: border-box;
+    filter: blur(10px);
+}
+.borderLinearGradientThree:after {
+    width: 100%;
+    max-width: 450px;
+    height: min-content;
+    padding: 1rem;
+    color: white;
+    border-width: 5px;
+    border-style: solid;
+    border-image: 
+      linear-gradient(
+        to bottom, 
+        lime, 
+        rgba(0, 0, 0, 0)
+      ) 1 100%;  
+    position: relative;
+    box-sizing: border-box;
+    filter: blur(40px);
+}
+
+section h2 {
+    color: snow;
+    font-size: 2rem;
+    text-align: center;
+}
+section img {
+    width: 90%;
+    margin: 0 auto;
+}
+section p {
+    color: lightgrey;
+    font-size: 1.2rem;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+#scrollPath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background-color: rgba(255,255,255,0.05);
+}
+#progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(to top, lime, pink, violet, blue);
+    animation: animate 6s linear infinite;
+}
+@keyframes animate
+{
+    0% , 100%
+    {
+        filter: hue-rotate(0deg);
+    }
+    50%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#progressbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, lime, pink, violet, blue);
+    filter: blur(10px);
+}
+#progressbar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, lime, pink, violet, blue);
+    filter: blur(30px);
+}
+
+div {
+  width: 100%;
+  text-align: center;
+  animation: animate 6s linear infinite;
+}
+
+.on-dark button, .on-light button {
+    color: white;
+    margin: 2rem auto;
+}
+
+button {
+    background: none;
+    text-decoration: inherit;
+    font-family: system-ui;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+}
+
+.border-gradient {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+}
+
+.border-gradient-purple {
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+.border-gradient-green {
+    border-image-source: linear-gradient(to left, #00C853, #B2FF59);
+}
