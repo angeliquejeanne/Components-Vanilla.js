@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/style/style.css">
+  
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header role="banner" id="header" class="header">
+        <h1 class="logo" id="logo">Web & I</h1>
+        <h2 class="h2">Popup video</h2>
+    </header>
+
+    <!-- MAIN -->
+    <main role="main" id="main">
+        <div class="banner">
+
+            <div class="content">
+
+                <img src="./src/img/01.jpg">
+                <h2>Video Popup on Click in JavaScript (Responsive)</h2>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, 
+                    sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                <button href="#myvideo" onclick="lightbox_open();">Watch Trailer</button>    
+            </div>
+
+        </div>
+
+        <div id="fade" onClick="lightbox_close();"></div>
+
+        <div class="trailer" id="light">
+            <video src="./G2.webm" controls="true" id="myvideo" class="myVideo" width="600px"
+            height="360px"></video>
+            <button class="close boxclose" id="boxclose" onclick="lightbox_close();">
+                <img src="./src/img/close.png" alt="icone du btouton de fermeture de la popup vidéo">
+            </button>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <p>© Angélique pour Web & I – Tous droits réservés</p>
+    </footer>
+
+<!-- SCRIPT -->
+<script src="./src/script/script.js"></script>
+
+</body>
+</html>

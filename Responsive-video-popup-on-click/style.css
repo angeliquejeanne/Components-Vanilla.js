@@ -1,0 +1,112 @@
+
+
+.banner .content h2 {
+    color: bisque;
+    font-weight: 300;
+    font-size: 2em;
+}
+.banner .content p {
+    font-size: 1.2em;
+    color: bisque;
+    font-weight: 300;
+    margin: 15px 0 25px;
+}
+.banner .content a {
+    position: relative;
+    text-transform: uppercase;
+    background: bisque;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+#light {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    max-height: 360px;
+    margin: 0 auto;
+    border: 2px solid #FFF;
+    background: #FFF;
+    z-index: 1002;
+    overflow: visible;
+}
+
+.trailer.active {
+    
+    visibility: visible;
+    opacity: 1;
+}
+.trailer .myVideo {
+    position: relative;
+    max-width: 600px;
+    outline: none;
+}
+/* #boxclose {
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #AEAEAE;
+    border-radius: 3px;
+    background: #222222;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    z-index: 1002;
+    opacity: 0.9;
+} */
+
+/* .boxclose:before {
+  content: "×";
+} */
+.close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+}
+#fade:hover ~ #boxclose {
+  display:none;
+}
+
+.test:hover ~ .test2 {
+  display: none;
+}
+
+#fade {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media (max-width: 991px) {
+    .trailer .myVideo
+    {
+        max-width: 90%;
+    }
+}
